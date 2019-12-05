@@ -1,7 +1,19 @@
 .wrapper {
+    background-color: green;
+    overflow: hidden;
     padding-left: 18px;
     padding-right: 18px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    &--medium {
+        max-width: 970px;
+    }
+
+    /* any wrapper that is nested within another wrapper should no longer have any horizontal padding */
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

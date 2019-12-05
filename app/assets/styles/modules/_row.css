@@ -1,0 +1,29 @@
+.row {
+    background-color: yellow;
+
+    @mixin clearfix;
+    
+    &--gutters {
+        /*  make the last column protrude out of the wrapper and be then hidden by the
+         wrapper having its overflow set to hidden, giving the illusion of removing the
+         last columns padding-right(gutter) */
+        margin-right: -65px;
+    }
+
+    /*  select -not the main row - but its child columns */
+    &--gutters > div {
+        padding-right: 65px;
+        
+    }
+
+    &__4 {
+        float: left;
+        width: 33.33%;
+    }
+
+    &__8 {
+        float: left;
+        width: 66.66%;
+    }
+
+}
