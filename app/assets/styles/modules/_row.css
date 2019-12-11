@@ -1,6 +1,10 @@
 .row {
 
     @mixin clearfix;
+
+    &--t-padding {
+        padding-top: 80px;
+    }
     
     &--gutters {
         /*  make the last column protrude out of the wrapper and be then hidden by the
@@ -8,18 +12,25 @@
          last columns padding-right(gutter) */
         margin-right: -65px;
     }
-
-    &--gutters-large {
-        margin-right: -100px;
-    }
-
     /*  select -not the main row - but its child columns */
     &--gutters > div {
         padding-right: 65px;
     }
+   
+    &--gutters-large {
+        margin-right: -100px;
+    }
 
     &--gutters-large > div {
         padding-right: 100px;
+    }
+
+    &--gutters-small {
+        margin-right: -45px;
+    }
+
+    &--gutters-small > div {
+        padding-right: 45px;
     }
 
     &__b-margin-until-medium {
@@ -53,6 +64,18 @@
         &__medium-8--larger {
             width: 63%;
         }
-
     }
+
+    /*  begin equal height rules */
+    &--equal-height-at-medium {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex; 
+        }
+    }
+    
 }

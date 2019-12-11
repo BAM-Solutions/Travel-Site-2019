@@ -1,0 +1,33 @@
+.testimonial {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 0 1.8rem 1px 1.8rem;
+
+    &__photo {
+        border-radius: 80px;
+        overflow: hidden;
+        /* to make the image look like a circle - 
+        match the css dimensions to the actual image size*/
+        width: 160px;
+        height: 160px;
+        margin: 0 auto -80px auto;
+        position: relative;
+        top: -80px;
+        border: 6px solid rgba(255, 255, 255, .7);
+    }
+
+    &__title {
+        color: $mainBlue;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    &__subtitle {
+        color: $mainOrange;
+        text-align: center;
+        font-weight: 400;
+        font-size: .97rem;
+        margin: .25rem 0 1rem 0;
+    }
+}
